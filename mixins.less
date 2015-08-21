@@ -1,0 +1,62 @@
+//Centering absolute position
+// Support > ie9
+
+
+.exact-center () {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+
+.horizontal-center () {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  -webkit-transform: translate(-50%,0);
+}
+
+.vertical-center () {
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  -webkit-transform: translate(0,-50%);
+}
+
+
+// Font Awesome
+
+.fa (@content) {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  content: @content;
+}
+
+
+// Flexbox display --- Apply to container
+// parameters: row | row-reverse | column | column-reverse
+
+.flex-container(@direction) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: @direction;
+  -ms-flex-direction: @direction;
+  flex-direction: @direction;
+}
+
+//Flexbox oder -- apply to blocks
+//Parameters: order numbers
+
+.flex-order(@order) {
+  -webkit-box-ordinal-group: @order;
+  -moz-box-ordinal-group: @order;
+  -ms-flex-order: @order;
+  -webkit-order: @order;
+  order: @order;
+}
